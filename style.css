@@ -1,0 +1,229 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Teko", sans-serif;
+}
+#container{
+    width:100%;
+    height: 100vh; /* vh adjusts hight as such as responsive */
+    position: relative; /* placed in its normal position */
+}
+#navbar{
+    display: flex; /* to make child elemnt into inline */
+    width: 85%;
+    margin-left: 100px;
+    justify-content:space-between ; /* place content horizontally */
+    align-items: center; /* place content vertically center */
+}
+#logo{
+    width: 130px;
+}
+.listItem{
+    list-style: none;/* remove the style of listed items */
+    display: inline; /* side by side or displaying in a single line */
+    margin: 10px 20px; /* This provides spacing b/w elements */
+    font-weight: 700; /* To increase boldness */
+}
+.listItem:hover{
+    color: chocolate; /* highlighting */
+    cursor: pointer;
+}
+li a{
+    color: black;
+    text-decoration: none;
+}
+li a:hover{
+    color: green;
+    text-decoration: none;
+}
+
+#title{
+    margin-top: 13%;
+    margin-left: 8%;
+}
+#title h1{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+#lastname
+{
+    color: green;
+}
+#title a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+#images{
+    width: 45%;
+    height: 80%;
+    position: absolute; /* postion absolute is  related to parent whose position is relative
+    */
+    bottom: 0px;
+    right: 30px;
+}
+.imageGroup{
+    position: absolute;
+    height: 100%;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%); /* nullifying the scroll effect */
+    transition: bottom 1s, left 2s;/* image transition time */
+}
+#images:hover #shape{
+    bottom: 70px;
+}
+#images:hover #girl{
+left: 40%;
+}
+#about{
+    margin: 14% 8% 0 8%;
+}
+.heading{
+    text-align: center;
+}
+.heading h2{
+    font-size: 28px;
+}
+.heading p{
+    font-size: 18px;
+    color: green;
+}
+#content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr); /* divides available space into fraction */
+    gap: 2rem; /*rem- related to html element font-size basically it is 16px */
+    margin-top: 2rem;
+}
+#content_img img{
+    width: 80%;
+}
+#content_details{
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 400;
+}
+#informatiom{
+    margin-top: 2rem; /* to bring/move down */
+}
+.info{
+    margin-top: 1rem;
+}
+.info span{
+    margin-left: 1rem;
+}
+#skill{
+    margin: 8% 8%0 8% ;
+}
+#skill_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+#skill_img{
+    width: 90%;
+}
+.bar_container{
+    display: flex;
+    justify-content: space-between; /* creates space b/w child elements */
+    padding: 2rem;
+    align-items: center;/* becomes verticaly center */
+    position: relative;
+}
+.bar_container span{
+    font-weight: 600;
+    font-size: 20px;
+}
+.bar{
+    width: 90%;
+    height: 0.5rem;
+    background-color: black;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+}
+#html_bar{
+    width: 85%;
+    background-color: orange;
+}
+#css_bar{
+    width: 78%;
+    background-color: orange;
+}
+#js_bar{
+    width: 79%;
+    background-color: orange;
+}
+#react_bar{
+    width: 75%;
+    background-color: orange;
+}
+
+
+#contact{
+    margin-top: 5%;
+}
+.icon_set{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+   padding-bottom: 50px;
+}
+
+.icon, .up_arrow{ /* here up_arrow is added as it needs the same styling as icon thus here group selector */
+    width: 50px;
+    height: 50px; /* here space automatically came bcs margin being covered */
+    /* border: 1px solid red; */
+    margin: 0px 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* make it in the center of div these above three used */
+    border-radius: 50%;
+}
+.icon i{
+    color: black;
+}
+.icon:hover{
+    background-image: linear-gradient(to bottom right,rgb(192, 192, 64),orange);
+    animation: shake 0.75s;
+}
+.icon:hover i{
+    color: white; /* here color changes when it reaches the icon */
+
+}
+@keyframes shake {
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+
+    
+}
+
+footer{
+    margin: 2.5rem 0px;
+}
+footer p{
+    font-size: 17px;
+    font-weight: 500;
+    text-align: center;
+}
+.up_arrow{
+    background-image: linear-gradient(to bottom right,rgb(192, 192, 64),orange);
+    float: right;
+    margin: 13px 50px 50px 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
